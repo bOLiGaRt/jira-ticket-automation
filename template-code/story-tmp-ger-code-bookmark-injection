@@ -30,11 +30,10 @@ faster._\n\n"
 + " * What analyses have already been performed\n"
 + " * What was the result of the research";
 var url = jiraUrl + "secure/CreateIssueDetails!init.jspa" +
-"?pid=33531" +
-"&issuetype=35" +
-"&priority=9" +
+"?pid=" +
+"&issuetype=" +
+"&priority=" +
 "&summary=" + encodeURIComponent(vorgegebenerTextSum) +
-"&customfield_13470=12871" +
 "&description=" + encodeURIComponent(vorgegebenerTextDesc);
 window.open(url, "_blank");
 })();
