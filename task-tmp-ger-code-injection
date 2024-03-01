@@ -1,0 +1,68 @@
+javascript:(function() {
+  // Jira URL
+  var jiraUrl = "https://jira.schlesinger.pro/";
+
+  // Vorgegebener Text für den Titel
+  var vorgegebenerTextSum = "[tmp-bug-ext] genauer Titel";
+
+  // Neue Beschreibung unter Verwendung der "INVEST" Methode
+  var vorgegebenerTextDesc =
+    "h2. Verwendung der 'INVEST' Methode:\n\n" +
+    "*I* - Independent (unabhängig)\n" +
+    "*N* - Negotiable (verhandelbar)\n" +
+    "*V* - Valuable (wertvoll)\n" +
+    "*E* - Estimable (abschätzbar)\n" +
+    "*S* - Small (klein)\n" +
+    "*T* - Testable (testbar)\n\n" +
+    "h2. Titel:\n\n" +
+    "Kurze und prägnante Beschreibung der Aufgabe\n\n" +
+    "Beispiel: Suchfunktion auf der Website hinzufügen\n\n" +
+    "h2. Labels:\n\n" +
+    "Kategorisieren Sie die Aufgabe\n\n" +
+    "Beispiel: \"Kundenfeedback\", \"Bugfix\", \"Neue Funktionalität\"\n\n" +
+    "h2. Hintergrund:\n\n" +
+    "Erläutern Sie kurz, warum die Aufgabe wichtig ist und in welchem Kontext sie steht\n\n" +
+    "Beispiel: Im Rahmen der User Story[RIMC-XXXX] \"Suchfunktion auf der Website hinzufügen\" muss die Suchfunktion tatsächlich implementiert werden.\n\n" +
+    "h2. Ziel:\n\n" +
+    "Beschreiben Sie klar und präzise, was erreicht werden soll\n\n" +
+    "Beispiel: Eine Suchfunktion auf der Website implementieren, die es Benutzern ermöglicht, nach Produkten zu suchen.\n\n" +
+    "h2. Schritte:\n\n" +
+    "Erläutern Sie die notwendigen Schritte, um das Ziel zu erreichen\n\n" +
+    "Beispiel:\n\n" +
+    "- Sammeln und Indizieren der zu durchsuchenden Inhalte: Dies beinhaltet das Erstellen einer Datenbank oder eines Indexes mit den zu durchsuchenden Inhalten, wie z.B. Texten, Bildern oder Videos.\n" +
+    "- Entwickeln eines Such-Frontends: Dies beinhaltet das Erstellen einer Benutzeroberfläche, über die Nutzer Suchanfragen eingeben und die Suchergebnisse angezeigt werden können.\n" +
+    "- Entwickeln eines Such-Backends: Dies beinhaltet das Schreiben von Code, der die Suchanfragen verarbeitet und die Ergebnisse aus der Datenbank oder dem Index abruft.\n" +
+    "- Integrieren der Suchfunktion in die Webseite: Dies beinhaltet das Einbinden der Such-Frontend- und Backend-Komponenten in die bestehende Webseite.\n" +
+    "- Testen und Optimieren der Suchfunktion: Dies beinhaltet das Testen der Suchfunktion auf Fehler und die Optimierung der Ergebnisse, um sicherzustellen, dass die Suchergebnisse relevant und genau sind.\n\n" +
+    "h2. Erfolgskriterien:\n\n" +
+    "Legen Sie fest, wie der Erfolg gemessen wird\n\n" +
+    "Beispiel:\n\n" +
+    "- Relevanz der Suchergebnisse: Die Suchergebnisse sollten relevant zur Suchanfrage des Nutzers sein und möglichst genau die gewünschten Informationen liefern.\n" +
+    "- Geschwindigkeit: Die Suche sollte schnell durchgeführt werden, um eine gute Benutzererfahrung zu gewährleisten.\n" +
+    "- Benutzerfreundlichkeit: Die Suchfunktion sollte einfach zu verwenden sein und eine klare und intuitiv gestaltete Benutzeroberfläche haben.\n" +
+    "- Skalierbarkeit: Die Suchfunktion sollte in der Lage sein, große Mengen an Daten zu verarbeiten und skalieren zu können, um auch in Zukunft noch zuverlässig zu funktionieren.\n" +
+    "- Zuverlässigkeit: Die Suchfunktion sollte zuverlässig sein und möglichst wenig Fehler produzieren.\n" +
+    "- Anpassbarkeit: Die Suchfunktion sollte an die Bedürfnisse des Unternehmens oder der Organisation angepasst werden können, um spezifische Anforderungen zu erfüllen.\n" +
+    "- Sicherheit: Die Suchfunktion sollte sicher sein und die Daten des Nutzers schützen und gegen unbefugten Zugriff schützen.\n\n" +
+    "h2. Abhängigkeiten:\n\n" +
+    "Geben Sie an, von welchen anderen Aufgaben/Projekten diese Aufgabe abhängig ist\n\n" +
+    "Beispiel:\n\n" +
+    "- Datenbank: Eine Suchfunktion benötigt in der Regel eine Datenbank oder einen Index, in dem die zu durchsuchenden Inhalte gespeichert sind. Daher kann es Abhängigkeiten zur Datenbank-Design und -Architektur geben.\n" +
+    "- Frontend-Entwicklung: Die Suchfunktion wird über eine Benutzeroberfläche zugänglich gemacht, daher kann es Abhängigkeiten zur Frontend-Entwicklung geben.\n" +
+    "- Backend-Entwicklung: Das Backend der Suchfunktion ist verantwortlich für die Verarbeitung der Suchanfragen und die Abfrage der Datenbank oder des Indexes, daher gibt es Abhängigkeiten zur Backend-Entwicklung.\n" +
+    "- Server-Infrastruktur: Eine Suchfunktion benötigt in der Regel eine gewisse Server-Infrastruktur, um große Mengen an Daten zu verarbeiten und zu speichern. Daher kann es Abhängigkeiten zur Server-Infrastruktur geben.\n" +
+    "- Sicherheit: Da die Suche möglicherweise sensiblen Daten zugänglich macht, gibt es Abhängigkeiten zur Sicherheit, um die Daten des Nutzers zu schützen und gegen unbefugten Zugriff zu schützen.\n" +
+    "- Testen und Qualitätssicherung: Eine Suchfunktion muss getestet werden um zu gewährleisten dass sie zuverlässig und fehlerfrei funktioniert, daher gibt es Abhängigkeiten zum Testen und Qualitätssicherung.\n" +
+    "- Dokumentation und Schulung: Eine Suchfunktion muss gut dokumentiert und geschult werden, damit die Anwender wissen wie sie sie benutzen sollen und welche Erwartungen sie haben können, daher gibt es Abhängigkeiten zur Dokumentation und Schulung.\n";
+
+  // Erstellen der Jira-Issue-URL
+  var url = jiraUrl + "secure/CreateIssueDetails!init.jspa" +
+    "?pid=" +
+    "&issuetype=" +
+    "&priority=" +
+    "&summary=" + encodeURIComponent(vorgegebenerTextSum) +
+    "&description=" + encodeURIComponent(vorgegebenerTextDesc);
+
+  // Öffnen des Jira-Fensters in einem neuen Tab
+  window.open(url, "_blank");
+})();
