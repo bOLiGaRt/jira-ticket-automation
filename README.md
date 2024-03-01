@@ -11,16 +11,8 @@ NVEST method for increasing quality: The INVEST method is a framework for creati
 development
 
 # Creation
-To create Jira ticket templates using javascript code, you need the following information in advance:
+To create Jira ticket templates using javascript code, you need the following information in advance: Extract the project specification: PROJECT BRIEF (example: )https://jira.schlesinger.pro//rest/api/latest/project/ https://jira.schlesinger.pro//rest/api/latest/project/XXX
 
-Extract the project specification: PROJECT BRIEF (example: )https://jira.schlesinger.pro//rest/api/latest/project/ https://jira.schlesinger.pro//rest/api/latest/project/XXX
+Necessary information: pid, issuetype(s), priority, customfield(s)
 
-Necessary information:
-pid
-issuetype(s)
-priority
-customfield(s)
-...
-
-The following Jira interface is used:
-secure/CreateIssueDetails!init.jspa
+The following Jira interface is used: secure/CreateIssueDetails!init.jspa
