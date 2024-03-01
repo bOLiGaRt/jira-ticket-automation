@@ -1,1 +1,40 @@
-
+javascript:(function() {
+var jiraUrl = "https://jira.portal.at/";
+var vorgegebenerTextSum = "[tmp-story-ext] precise title";
+var vorgegebenerTextDesc =
+"{code:java}\n"
++ "Using the 'INVEST' method:\n"
++ "'I' - Independent (unabhängig)\n"
++ "'N' - Negotiable (verhandelbar)\n"
++ "'V' - Valuable (wertvoll)\n"
++ "'E' - Estimable (abschätzbar)\n"
++ "'S' - Small (klein)\n"
++ "'T' - Testable (testbar){code}\n\n"
++ "h2. Story:\n"
++ "\"As [role designation], I want [goal/desire], so [benefit to user].\"\n"
++ "* _Why is this story important?_\n\n"
++ "h2. Use-Case:\n"
++ " * What capabilities are to be made available to the user through the implementation?\n\n"
++ "_Example: add a full and part-string search function to help users find the products they want
+faster._\n\n"
++ "h2. Acceptance criteria:\n"
++ " * _What must be achieved for the story to be marked as \"done\"?_\n\n"
++ "_Example:_\n"
++ " * _There is a product search box and a search button on the website_\n"
++ " * _The search returns relevant results based on product headlines and product descriptions_\n"
++ " * _There is a list of search results displayed_\n"
++ " * _There is a possibility to sort the search results by price and best rating._\n\n"
++ "h2. Technical Hint:\n"
++ " * What is linked\n"
++ " * What is related\n"
++ " * What analyses have already been performed\n"
++ " * What was the result of the research";
+var url = jiraUrl + "secure/CreateIssueDetails!init.jspa" +
+"?pid=33531" +
+"&issuetype=35" +
+"&priority=9" +
+"&summary=" + encodeURIComponent(vorgegebenerTextSum) +
+"&customfield_13470=12871" +
+"&description=" + encodeURIComponent(vorgegebenerTextDesc);
+window.open(url, "_blank");
+})();
