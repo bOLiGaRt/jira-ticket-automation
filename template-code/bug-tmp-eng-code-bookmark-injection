@@ -25,11 +25,10 @@ var vorgegebenerTextDesc =
 + " * Screenshot/GIF/Video \n"
 + "_-> Relate the bug to the requirements story_";
 var url = jiraUrl + "secure/CreateIssueDetails!init.jspa" +
-"?pid=33531" +
-"&issuetype=1" +
-"&priority=9" +
+"?pid=" +
+"&issuetype=" +
+"&priority=" +
 "&summary=" + encodeURIComponent(vorgegebenerTextSum) +
-"&customfield_13470=12871" +
 "&description=" + encodeURIComponent(vorgegebenerTextDesc);
 window.open(url, "_blank");
 })();
