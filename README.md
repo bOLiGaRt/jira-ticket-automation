@@ -22,6 +22,8 @@ development
 8. hit the bookmark while you are in your Jira tab
 9. new Jira ticket for your project with your specifics opens
 
+* For more information, just watch the videos
+
 To create Jira ticket templates using javascript code, you need the following information in advance: Extract the project specification:
 * PROJECT BRIEF: example: https://jira.schlesinger.pro/rest/api/latest/project/XXX
 * Necessary information: pid, issuetype(s), priority, customfield(s)
