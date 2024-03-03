@@ -1,7 +1,7 @@
 # jira-ticket-automation
-¡Automated! creation of jira ticktes using templates for each Jira project
+¡Automated! creation of jira ticktes using templates for each Jira project. JavaScript code bookmark injection.
 
-Introduction
+Instructions
 
 In the context of agile software development processes, the use of standardised tickets has proven to be an effective means of optimising the development process and increasing the quality of results. optimise the development process and increase the quality of the results. By using such tickets, we can work together more efficiently work together more efficiently, set priorities and organise our work transparently. A proven framework that can help to create high-quality tickets is the tickets is the INVEST method.
 
@@ -11,8 +11,18 @@ NVEST method for increasing quality: The INVEST method is a framework for creati
 development
 
 # Creation
-To create Jira ticket templates using javascript code, you need the following information in advance: Extract the project specification: PROJECT BRIEF (example: )https://jira.schlesinger.pro//rest/api/latest/project/ https://jira.schlesinger.pro//rest/api/latest/project/XXX
 
-Necessary information: pid, issuetype(s), priority, customfield(s)
+1. copy the JaveScript code
+2. customise the code according to your needs
+3. add your project specifics (pid,...)
+4. create a "new tab" bookmark
+5. paste the code into the address of the bookmark
+6. login to your Jira project
+7. open Jira tab
+8. hit the bookmark while you are in your Jira tab
+9. new Jira ticket for your project with your specifics opens
 
-The following Jira interface is used: secure/CreateIssueDetails!init.jspa
+To create Jira ticket templates using javascript code, you need the following information in advance: Extract the project specification:
+* PROJECT BRIEF: example: https://jira.schlesinger.pro/rest/api/latest/project/XXX
+* Necessary information: pid, issuetype(s), priority, customfield(s)
+* The following Jira interface is used: secure/CreateIssueDetails!init.jspa
