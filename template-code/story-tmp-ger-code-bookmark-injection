@@ -1,5 +1,5 @@
 javascript:(function() {
-var jiraUrl = "https://jira.portal.at/";
+var jiraUrl = "https://jira.schlesinger.pro/";
 var vorgegebenerTextSum = "[tmp-story-ext] precise title";
 var vorgegebenerTextDesc =
 "{code:java}\n"
