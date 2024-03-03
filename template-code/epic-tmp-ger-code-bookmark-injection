@@ -1,6 +1,6 @@
 javascript:(function() {
   // Jira URL
-  var jiraUrl = "https://jira.portal.at/";
+  var jiraUrl = "https://jira.schlesinger.pro/";
 
   // Vorgegebener Text für den Titel
   var vorgegebenerTextSum = "[tmp-bug-ext] genauer Titel";
